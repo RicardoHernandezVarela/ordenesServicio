@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- materialize icons, css & js -->
+  <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" href="/css/styles.css" rel="stylesheet">
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <!-- Navegación principal -->
+            <nav class="navegacion">
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo">
+                        Logo
+                        <!--<img src="/img/lm.jpeg" alt="" class="brand-logo">-->
+                    </a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="/pages/ordenes.html">Orden de entrada</a></li>
+                        <li><a href="/pages/cotizacion.html">Cotización</a></li>
+                        <li><a href="collapsible.html">Facturación</a></li>
+                        <li><a href="mobile.html">Nota de venta</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Sidenav menu -->
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="/pages/ordenes.html">Orden de entrada</a></li>
+                <li><a href="/pages/cotizacion.html">Cotización</a></li>
+                <li><a href="collapsible.html">Facturación</a></li>
+                <li><a href="mobile.html">Nota de venta</a></li>
+            </ul>
+        </div>
+
+        <div class="form-content">
+            <div class="input-field">
+                <i class="material-icons prefix">textsms</i>
+                <input type="text" id="autocomplete-input" class="auto">
+                <label for="autocomplete-input">Cliente</label>
+            </div>
+            <br>
+            <div class="input-field">
+                <i class="material-icons prefix">textsms</i>
+                <input type="text" id="autocomplete-input" class="comp">
+                <label for="autocomplete-input">Equipo</label>
+            </div>
+            <br>
+            <div class="prueb">Hola</div>
+            <div class="prueb2">Hola</div>
+        </div>
+        
+
+    </div>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBUnYM0D9EBbcN-oinLYi-k9ELsHeKI28s",
+            authDomain: "citycoffee-ae927.firebaseapp.com",
+            databaseURL: "https://citycoffee-ae927.firebaseio.com",
+            projectId: "citycoffee-ae927",
+            storageBucket: "",
+            messagingSenderId: "396481801831",
+            appId: "1:396481801831:web:f8f663c1be55275e"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        //db.settings({ timestampsInSnapshots: true});
+    </script>
+
+    <script src="/js/app.js"></script>
+    
+    <!--
+    <script src="/js/db.js"></script>
+    <script src="/js/ui.js"></script>
+    -->
+
+</body>
+</html>

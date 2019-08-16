@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.label {
+    font-size: 15px;
+    color: #000;
+}
+
+
+
+/**********************************************************
+GRID style
+**********************************************************/
+.wrapper {
+    display: grid;
+    grid-gap: 0.5px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10vh 90vh;
+
+}
+
+/**********************************************************
+HEADER - NAV
+**********************************************************/
+.header {
+    grid-column: 1 / -1;
+    background-color: #30a9de;
+}
+
+.brand-logo {
+    
+}
+
+/**********************************************************
+SIDE - MENU
+**********************************************************/
+.menu {
+    grid-column: 1 / 3;
+    /*background-color: #e53a40;*/
+}
+
+/**********************************************************
+CONTENIDO PRINCIPAL
+**********************************************************/
+.content {
+    grid-column: 1 / -1;
+    background-color: #e0e3da;
+}
+
+.searchOrden {
+    margin: 1% auto;
+    width: 70%;
+}
+
+.search {
+    width: 5%;
+}
+
+.encabezadoOrden {
+    display: flex;
+}
+
+.ordenInfo {
+    margin: 0.3% auto;
+    width: 70%;
+}
+
+.autocomplete-content img {
+    display: none;
+}
+
+.cardInfo {
+    padding: 0;
+}
+
+.conctentInfo {
+    display: flex;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.ordenExistente {
+    width: 90%;
+    margin: 0 5%;
+    padding-bottom: 6px;
+}
+
+.addOrden {
+    margin-top: 0.2%;
+}
+
+.opcOrden {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+/**********************************************************
+VISTA PARA OTROS DISPOSITIVOS
+**********************************************************/
+@media screen and (min-width: 300px) {
+    .searchOrden {
+        width: 85%;
+    }
+
+    .divider {
+        margin-bottom: 2.5%;
+    }
+    
+    .ordenInfo {
+        width: 85%;
+    }
+
+    .exField {
+        margin: 0 3%;
+        margin-top: 3%;
+    }
+
+    .btnOpcion {
+        margin: 3px 23.2px;
+    }
+   
+    .imp {
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 4%;
+        padding: 0;
+    }
+
+    .impField {
+        width: 40%;
+        margin-right: 5%;
+    }
+
+    .opcOrden {
+        margin: 0 8%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .brand-logo {
+        margin-left: 5%;
+    }
+
+    .searchOrden {
+        width: 70%;
+        margin-top: 0.5%;
+        margin-bottom: 1%;
+    }
+    
+    .ordenInfo {
+        margin-top: 0;
+        width: 70%;
+    }
+
+    .divider {
+        margin-top: 0;
+        margin-bottom: 0.5%;
+    }
+
+    .cardInfo {
+        padding: 0;
+    }
+
+    .conctentInfo {
+        display: flex;
+        text-align: center;
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    .exField {
+        margin: 0 4%;
+        margin-top: 1.5%;
+        width: 30%;
+    }
+
+    .inpEx {
+        font-size: 1em;
+    }
+
+    .btnOpcion {
+        margin: 3px auto;
+    }
+
+    .card-action {
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .imp {
+        margin-top: 1.8%;
+    }
+
+    .impField {
+        margin-bottom: 1%;
+    }
+
+}
