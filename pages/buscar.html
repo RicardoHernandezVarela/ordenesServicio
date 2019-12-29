@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ordenes</title>
+  <link rel="icon" href="../img/dish.png">
+
+  <!-- materialize icons, css & js -->
+  <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" href="/css/styles.css" rel="stylesheet">
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="/icons/icon-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#ff8816"> 
+  <meta name="theme-color" content="#ff8816"> 
+</head>
+<body class="grey lighten-4">
+
+  <!-- top nav -->
+  <nav class="z-depth-0 blue">
+    <div class="nav-wrapper container">
+        <a href="/" class="blue-text text-lighten-3">Taking<span class="blue-text text-lighten-3">Orders</span></a>
+      <span class="right blue-text text-lighten-4">
+        <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+      </span>
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+    <li><a class="subheader">Ordenes</a></li>
+    <li><a href="/" class="waves-effect">Home</a></li>
+    <li><a href="/pages/buscar.html" class="waves-effect">Buscar orden</a></li>
+    <li><div class="divider"></div></li>
+    <li><a href="#" class="waves-effect">
+        <i class="material-icons">mail_outline</i>Cotizaciones</a>
+    </li>
+  </ul>
+
+  <!-- content -->
+  <div class="grey-text">
+      <br>
+      
+      <div class="center">
+        <a class="btn-floating btn-small btn-large">
+            <i class="material-icons" onclick="window.print()">print</i>
+        </a>
+      </div>
+
+      <form class="ordenImp containerOrden section">
+        <img src="/img/icons/icon-72x72.png" class="center" alt="order thumb">
+        <!-- ORDEN INFO -->
+        <div class="conctentInfo">
+            <div class="input-field">
+                <input placeholder="#" type="text" id="idInput" class="getOrden">
+                <label for="idInput">Orden ID</label>
+            </div>
+            <div class="input-field">
+                <input placeholder="DD/MM/AA" type="text" id="fechaInput" class="direccion">
+                <label for="fechaInput">Fecha</label>
+            </div>
+            <div class="input-field">
+                <input placeholder="ELABORO" type="text" id="elabInput" class="#">
+                <label for="elabInput">Técnico</label>
+            </div>
+        </div>
+        <div class="divider"></div>
+  
+        <!-- CLIENTE INFO -->
+        <div class="conctentInfo">
+            <div class="input-field exField">
+                <input placeholder="e.g. Juan López" type="text" id="clienteInput" class="clt inpEx">
+                <label for="clienteInput">Cliente</label>
+            </div>
+            <div class="input-field exField">
+                <input placeholder="e.g. calle # Colonia" type="text" id="direccionInput" class="direccion inpEx">
+                <label for="direccionInput">Direccion</label>
+            </div>
+            <div class="input-field exField">
+                <input placeholder="e.g. 771" type="text" id="telefonoInput" class="telefono inpEx">
+                <label for="telefonoInput">Telefono</label>
+            </div>
+        </div>
+  
+        <!-- EQUIPO INFO -->
+        <div class="conctentInfo">
+            <div class="input-field exField">
+                <input placeholder="e.g. A1278" type="text" id="modeloInput" class="eqp modelo">
+                <label for="modeloInput">Modelo</label>
+            </div>
+            <div class="input-field exField">
+                <input placeholder="e.g. MAC" type="text" id="tipoInput" class="tipo">
+                <label for="tipoInput">Tipo</label>
+            </div>
+            <div class="input-field exField">
+                <input placeholder="e.g. APPLE" type="text" id="marcaInput" class="marca">
+                <label for="marcaInput">Marca</label>
+            </div>
+        </div>
+  
+        <!-- NUMEROS DE SERIE -->
+        <div class="conctentInfo">
+            <div class="input-field exField">
+                <input placeholder="e.g. 123" type="text" id="nsEquipoInput" class="equipoNS">
+                <label for="modeloInput">N.S. Equipo</label>
+            </div>
+            <div class="input-field exField">
+                <input placeholder="e.g. 456" type="text" id="nsCargadorInput" class="cargadorNS">
+                <label for="tipoInput">N.S. Cargador</label>
+            </div>
+            <div class="input-field exField">
+                <input placeholder="e.g. 789" type="text" id="nsBateriaInput" class="bateriaNS">
+                <label for="marcaInput">N.S. Batería</label>
+            </div>
+        </div>
+  
+        <!-- SERVICIO INFO -->
+        <div class="conctentInfo">
+            <div class="input-field exField">
+                <input placeholder="e.g. SISTEMA" type="text" id="fallaInput" class="falla">
+                <label for="fallaInput">Falla</label>
+            </div>
+            <div class="input-field exField">
+                <input placeholder="e.g. INST.SOFT." type="text" id="servicioInput" class="serv">
+                <label for="servicioInput">Servicio</label>
+            </div>
+            <div class="input-field exField">
+                <input placeholder="e.g. $$$" type="text" id="precioInput" class="precio">
+                <label for="precioInput">Precio</label>
+            </div>
+        </div>
+  
+        <!-- ENTRADA INFO -->
+        <div class="conctentInfo">
+            <div class="input-field exField">
+                <input placeholder="e.g. TOUCH" type="text" id="partesInput" class="partes">
+                <label for="fallaInput">Partes dañadas</label>
+            </div>
+            <div class="input-field exField">
+                <input placeholder="e.g. MAX 100GB" type="text" id="respaldoInput" class="respaldo">
+                <label for="servicioInput">Respaldo</label>
+            </div>
+            <div class="input-field exField">
+                <input placeholder="e.g. Observaciones" type="text" id="obsInput" class="observaciones">
+                <label for="precioInput">Observaciones</label>
+            </div>
+        </div>
+
+        <!-- FIRMA INFO -->
+        <div class="conctentInfo">
+            <div class="input-field">
+                <input placeholder="#" type="text" id="firmaInput" class="#">
+                <label for="firmaInput">FIRMA TECNICO</label>
+            </div>
+        </div>
+  
+      </form>
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+  
+  <!-- DATABASE INFO -->
+  <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+          apiKey: "AIzaSyBUnYM0D9EBbcN-oinLYi-k9ELsHeKI28s",
+          authDomain: "citycoffee-ae927.firebaseapp.com",
+          databaseURL: "https://citycoffee-ae927.firebaseio.com",
+          projectId: "citycoffee-ae927",
+          storageBucket: "",
+          messagingSenderId: "396481801831",
+          appId: "1:396481801831:web:f8f663c1be55275e"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      //db.settings({ timestampsInSnapshots: true});
+  </script>
+
+  <script src="/js/search.js"></script>
+</body>
+</html>

@@ -1,3 +1,19 @@
+window.addEventListener('load', async e => {
+
+    if('serviceWorker' in navigator) {
+        try {
+            navigator.serviceWorker.register('sw.js');
+            console.log(`SW registered`);
+        } catch (error) {
+            console.log(`SW reg failed`);
+            
+        }
+    }
+  });
+
+var newOrdenId = {
+
+};
 /********************************************
 Obtener fecha
 *********************************************/
@@ -74,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var servicio = document.querySelector('.serv');
     var servInst = M.Autocomplete.init(servicio, servicios);
-  });
+});
   
 /********************************************
  Cargar las colecciones de la base de datos.
@@ -125,7 +141,7 @@ db.collection('servicio').onSnapshot((snapshot) => {
 const form = document.querySelector('.ordenExistente');
 const guardarOrden = document.querySelector('.guardarOrden');
 
-guardarOrden.addEventListener('click', evt => {
+form.addEventListener('submit', evt => {
     evt.preventDefault();
 
     if (form.clienteInput.value != '' && form.modeloInput.value != '') {
@@ -156,7 +172,21 @@ guardarOrden.addEventListener('click', evt => {
                 form.obsInput.value
             ],
 
+        })
+        .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+            newOrdenId['id'] = docRef.id
+            
+            // Store it in the local storage
+            localStorage.setItem('id', docRef.id);
+            window.location.href = '../pages/buscar.html';
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
         });
+        
+        
+
     } else {
         alert("Incluye la información de la orden!!!")
     }
@@ -164,3 +194,5 @@ guardarOrden.addEventListener('click', evt => {
     //form.title.value = '';
     //form.ingredients.value = '';
 });
+
+  
